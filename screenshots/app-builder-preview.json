@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "SNBL ART",
+      "hasCanvas": false,
+      "bodyTextLen": 574,
+      "bodyTextHash": "fe04ef22c5ef7453bb148f7c0ef814927cebc92a8f2ecb9bf89d2d7097ef084c",
+      "bodyTextPrefix": "SNBL ART سنبل · FROM WALLS TO WORLDS عارض المجسمات الرسمي — حرّك",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "SNBL ART",
+      "hasCanvas": false,
+      "bodyTextLen": 145,
+      "bodyTextHash": "ae930c3de3eba7bf160014a0160de6f48c0ca5e80214480175dbedc1924b5275",
+      "bodyTextPrefix": "SNBL ART سنبل · FROM WALLS TO WORLDS Walls Drop 01 علبة الرش الأ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

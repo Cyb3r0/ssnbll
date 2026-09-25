@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #08090c;
+  --color-surface: #101318;
+  --color-elevated: #171b22;
+  --color-fg: #f3f5f8;
+  --color-muted: #8b93a1;
+  --color-subtle: #5c6572;
+  --color-primary: #00b4ff;
+  --color-primary-fg: #041018;
+  --color-ink: #050506;
+  --color-border: rgb(243 245 248 / 12%);
+  --color-danger: #d63a32;
+
+  --font-sans: "Cairo", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Permanent Marker", "Cairo", cursive;
+  --font-latin: "Outfit", "Cairo", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius: 12px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.35rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@keyframes snbl-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes snbl-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.snbl-rise {
+  animation: snbl-rise 400ms var(--ease-out) both;
+}
+
+.snbl-stage {
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 8%),
+    inset 0 -40px 80px rgb(0 0 0 / 35%),
+    0 24px 64px rgb(0 0 0 / 45%);
+}
+
+.snbl-stage::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset-inline: 12%;
+  top: 0;
+  height: 3px;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--color-primary) 80%, white),
+    transparent
+  );
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snbl-rise {
+    animation: none;
+  }
+}
